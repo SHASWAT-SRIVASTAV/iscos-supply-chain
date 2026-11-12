@@ -1,0 +1,673 @@
+{
+  "cities": [
+    "Delhi",
+    "Mumbai",
+    "Pune",
+    "Ahmedabad",
+    "Hyderabad",
+    "Bengaluru",
+    "Chennai",
+    "Kolkata"
+  ],
+  "road_edges": [
+    {
+      "from": "Delhi",
+      "to": "Ahmedabad",
+      "km": 940
+    },
+    {
+      "from": "Delhi",
+      "to": "Mumbai",
+      "km": 1400
+    },
+    {
+      "from": "Delhi",
+      "to": "Kolkata",
+      "km": 1470
+    },
+    {
+      "from": "Mumbai",
+      "to": "Pune",
+      "km": 150
+    },
+    {
+      "from": "Mumbai",
+      "to": "Ahmedabad",
+      "km": 525
+    },
+    {
+      "from": "Pune",
+      "to": "Ahmedabad",
+      "km": 660
+    },
+    {
+      "from": "Pune",
+      "to": "Hyderabad",
+      "km": 560
+    },
+    {
+      "from": "Pune",
+      "to": "Bengaluru",
+      "km": 840
+    },
+    {
+      "from": "Hyderabad",
+      "to": "Bengaluru",
+      "km": 570
+    },
+    {
+      "from": "Hyderabad",
+      "to": "Chennai",
+      "km": 630
+    },
+    {
+      "from": "Hyderabad",
+      "to": "Kolkata",
+      "km": 1500
+    },
+    {
+      "from": "Bengaluru",
+      "to": "Chennai",
+      "km": 350
+    },
+    {
+      "from": "Chennai",
+      "to": "Kolkata",
+      "km": 1650
+    },
+    {
+      "from": "Chennai",
+      "to": "Pune",
+      "km": 1180
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "S-001",
+      "name": "Apex Microcircuits",
+      "city": "Bengaluru",
+      "lead_time_days": 3,
+      "price_rating": 4.5,
+      "reliability": 0.98
+    },
+    {
+      "id": "S-002",
+      "name": "Bharat Precision Motors",
+      "city": "Pune",
+      "lead_time_days": 5,
+      "price_rating": 3.8,
+      "reliability": 0.92
+    },
+    {
+      "id": "S-003",
+      "name": "Delhi Sensor Dynamics",
+      "city": "Delhi",
+      "lead_time_days": 2,
+      "price_rating": 4.2,
+      "reliability": 0.95
+    },
+    {
+      "id": "S-004",
+      "name": "Deccan Structural Steel",
+      "city": "Hyderabad",
+      "lead_time_days": 7,
+      "price_rating": 3.2,
+      "reliability": 0.88
+    },
+    {
+      "id": "S-005",
+      "name": "Eastern Chemical & Resin",
+      "city": "Kolkata",
+      "lead_time_days": 6,
+      "price_rating": 3.5,
+      "reliability": 0.9
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "W-001",
+      "name": "Northern Mega Hub",
+      "city": "Delhi",
+      "capacity": 10000,
+      "cost_per_km": 1.4,
+      "active": true
+    },
+    {
+      "id": "W-002",
+      "name": "West Coast Terminal",
+      "city": "Mumbai",
+      "capacity": 12000,
+      "cost_per_km": 1.65,
+      "active": true
+    },
+    {
+      "id": "W-003",
+      "name": "Deccan Fulfilment Center",
+      "city": "Pune",
+      "capacity": 8500,
+      "cost_per_km": 1.25,
+      "active": true
+    },
+    {
+      "id": "W-004",
+      "name": "Southern Tech Logistics",
+      "city": "Bengaluru",
+      "capacity": 9500,
+      "cost_per_km": 1.3,
+      "active": true
+    },
+    {
+      "id": "W-005",
+      "name": "Eastern Gateway Warehouse",
+      "city": "Kolkata",
+      "capacity": 7000,
+      "cost_per_km": 1.5,
+      "active": true
+    }
+  ],
+  "products": [
+    {
+      "id": "P-001",
+      "name": "Industrial IoT Sensor",
+      "sku": "SEN-IOT-01",
+      "category": "Sensors",
+      "unit_price": 45.0,
+      "weight_kg": 0.25,
+      "supplier_id": "S-003"
+    },
+    {
+      "id": "P-002",
+      "name": "Optical Rotary Encoder",
+      "sku": "ENC-OPT-02",
+      "category": "Sensors",
+      "unit_price": 110.0,
+      "weight_kg": 0.6,
+      "supplier_id": "S-003"
+    },
+    {
+      "id": "P-003",
+      "name": "Brushless Servo Motor",
+      "sku": "MOT-SRV-01",
+      "category": "Motors",
+      "unit_price": 280.0,
+      "weight_kg": 2.5,
+      "supplier_id": "S-002"
+    },
+    {
+      "id": "P-004",
+      "name": "Planetary Gearbox 10:1",
+      "sku": "GBX-PLN-10",
+      "category": "Mechanical",
+      "unit_price": 175.0,
+      "weight_kg": 3.8,
+      "supplier_id": "S-002"
+    },
+    {
+      "id": "P-005",
+      "name": "Microcontroller Core Board",
+      "sku": "MCU-ARM-64",
+      "category": "Electronics",
+      "unit_price": 32.0,
+      "weight_kg": 0.15,
+      "supplier_id": "S-001"
+    },
+    {
+      "id": "P-006",
+      "name": "FPGA Accelerator Card",
+      "sku": "FPG-ACC-01",
+      "category": "Electronics",
+      "unit_price": 420.0,
+      "weight_kg": 0.45,
+      "supplier_id": "S-001"
+    },
+    {
+      "id": "P-007",
+      "name": "Switch-Mode Power Supply 24V",
+      "sku": "PSU-SMP-24",
+      "category": "Power",
+      "unit_price": 68.0,
+      "weight_kg": 1.2,
+      "supplier_id": "S-001"
+    },
+    {
+      "id": "P-008",
+      "name": "Cold-Rolled Steel Rod 20mm",
+      "sku": "STL-ROD-20",
+      "category": "Raw Materials",
+      "unit_price": 18.5,
+      "weight_kg": 5.0,
+      "supplier_id": "S-004"
+    },
+    {
+      "id": "P-009",
+      "name": "Aluminum Extrusion 4040",
+      "sku": "ALU-EXT-40",
+      "category": "Raw Materials",
+      "unit_price": 24.0,
+      "weight_kg": 2.1,
+      "supplier_id": "S-004"
+    },
+    {
+      "id": "P-010",
+      "name": "Heavy Duty Linear Rail",
+      "sku": "RAL-LNR-15",
+      "category": "Mechanical",
+      "unit_price": 145.0,
+      "weight_kg": 4.2,
+      "supplier_id": "S-002"
+    },
+    {
+      "id": "P-011",
+      "name": "Industrial Epoxy Resin 5L",
+      "sku": "CHM-EPX-05",
+      "category": "Chemicals",
+      "unit_price": 85.0,
+      "weight_kg": 5.5,
+      "supplier_id": "S-005"
+    },
+    {
+      "id": "P-012",
+      "name": "Polyurethane Timing Belt",
+      "sku": "BLT-PUR-08",
+      "category": "Mechanical",
+      "unit_price": 19.0,
+      "weight_kg": 0.3,
+      "supplier_id": "S-002"
+    },
+    {
+      "id": "P-013",
+      "name": "Proximity Limit Switch",
+      "sku": "SWT-PRX-01",
+      "category": "Sensors",
+      "unit_price": 22.0,
+      "weight_kg": 0.18,
+      "supplier_id": "S-003"
+    },
+    {
+      "id": "P-014",
+      "name": "Precision Ball Screw Assembly",
+      "sku": "BLS-PRC-25",
+      "category": "Mechanical",
+      "unit_price": 210.0,
+      "weight_kg": 3.4,
+      "supplier_id": "S-002"
+    },
+    {
+      "id": "P-015",
+      "name": "Thermal Interface Paste 50g",
+      "sku": "CHM-THM-50",
+      "category": "Chemicals",
+      "unit_price": 14.0,
+      "weight_kg": 0.08,
+      "supplier_id": "S-005"
+    }
+  ],
+  "inventory": [
+    {
+      "warehouse_id": "W-001",
+      "product_id": "P-001",
+      "quantity": 120,
+      "reserved": 0,
+      "reorder_level": 30,
+      "reorder_quantity": 100
+    },
+    {
+      "warehouse_id": "W-001",
+      "product_id": "P-002",
+      "quantity": 8,
+      "reserved": 0,
+      "reorder_level": 15,
+      "reorder_quantity": 40
+    },
+    {
+      "warehouse_id": "W-001",
+      "product_id": "P-003",
+      "quantity": 45,
+      "reserved": 0,
+      "reorder_level": 10,
+      "reorder_quantity": 30
+    },
+    {
+      "warehouse_id": "W-001",
+      "product_id": "P-005",
+      "quantity": 300,
+      "reserved": 20,
+      "reorder_level": 50,
+      "reorder_quantity": 200
+    },
+    {
+      "warehouse_id": "W-001",
+      "product_id": "P-007",
+      "quantity": 60,
+      "reserved": 0,
+      "reorder_level": 25,
+      "reorder_quantity": 80
+    },
+    {
+      "warehouse_id": "W-002",
+      "product_id": "P-001",
+      "quantity": 90,
+      "reserved": 0,
+      "reorder_level": 25,
+      "reorder_quantity": 80
+    },
+    {
+      "warehouse_id": "W-002",
+      "product_id": "P-003",
+      "quantity": 5,
+      "reserved": 0,
+      "reorder_level": 15,
+      "reorder_quantity": 30
+    },
+    {
+      "warehouse_id": "W-002",
+      "product_id": "P-004",
+      "quantity": 40,
+      "reserved": 0,
+      "reorder_level": 12,
+      "reorder_quantity": 25
+    },
+    {
+      "warehouse_id": "W-002",
+      "product_id": "P-008",
+      "quantity": 150,
+      "reserved": 0,
+      "reorder_level": 40,
+      "reorder_quantity": 100
+    },
+    {
+      "warehouse_id": "W-002",
+      "product_id": "P-010",
+      "quantity": 22,
+      "reserved": 0,
+      "reorder_level": 10,
+      "reorder_quantity": 20
+    },
+    {
+      "warehouse_id": "W-003",
+      "product_id": "P-003",
+      "quantity": 80,
+      "reserved": 0,
+      "reorder_level": 20,
+      "reorder_quantity": 50
+    },
+    {
+      "warehouse_id": "W-003",
+      "product_id": "P-004",
+      "quantity": 75,
+      "reserved": 0,
+      "reorder_level": 20,
+      "reorder_quantity": 40
+    },
+    {
+      "warehouse_id": "W-003",
+      "product_id": "P-009",
+      "quantity": 180,
+      "reserved": 0,
+      "reorder_level": 35,
+      "reorder_quantity": 120
+    },
+    {
+      "warehouse_id": "W-003",
+      "product_id": "P-012",
+      "quantity": 14,
+      "reserved": 0,
+      "reorder_level": 30,
+      "reorder_quantity": 80
+    },
+    {
+      "warehouse_id": "W-003",
+      "product_id": "P-014",
+      "quantity": 35,
+      "reserved": 0,
+      "reorder_level": 10,
+      "reorder_quantity": 25
+    },
+    {
+      "warehouse_id": "W-004",
+      "product_id": "P-001",
+      "quantity": 210,
+      "reserved": 0,
+      "reorder_level": 40,
+      "reorder_quantity": 150
+    },
+    {
+      "warehouse_id": "W-004",
+      "product_id": "P-005",
+      "quantity": 450,
+      "reserved": 0,
+      "reorder_level": 100,
+      "reorder_quantity": 300
+    },
+    {
+      "warehouse_id": "W-004",
+      "product_id": "P-006",
+      "quantity": 18,
+      "reserved": 0,
+      "reorder_level": 25,
+      "reorder_quantity": 50
+    },
+    {
+      "warehouse_id": "W-004",
+      "product_id": "P-007",
+      "quantity": 110,
+      "reserved": 0,
+      "reorder_level": 30,
+      "reorder_quantity": 80
+    },
+    {
+      "warehouse_id": "W-004",
+      "product_id": "P-013",
+      "quantity": 95,
+      "reserved": 0,
+      "reorder_level": 20,
+      "reorder_quantity": 60
+    },
+    {
+      "warehouse_id": "W-005",
+      "product_id": "P-008",
+      "quantity": 220,
+      "reserved": 0,
+      "reorder_level": 50,
+      "reorder_quantity": 150
+    },
+    {
+      "warehouse_id": "W-005",
+      "product_id": "P-011",
+      "quantity": 65,
+      "reserved": 0,
+      "reorder_level": 20,
+      "reorder_quantity": 40
+    },
+    {
+      "warehouse_id": "W-005",
+      "product_id": "P-015",
+      "quantity": 9,
+      "reserved": 0,
+      "reorder_level": 25,
+      "reorder_quantity": 50
+    },
+    {
+      "warehouse_id": "W-005",
+      "product_id": "P-001",
+      "quantity": 60,
+      "reserved": 0,
+      "reorder_level": 15,
+      "reorder_quantity": 50
+    },
+    {
+      "warehouse_id": "W-005",
+      "product_id": "P-009",
+      "quantity": 130,
+      "reserved": 0,
+      "reorder_level": 30,
+      "reorder_quantity": 80
+    }
+  ],
+  "orders": [
+    {
+      "id": "O-001",
+      "customer_name": "Tata Motors R&D",
+      "destination_city": "Pune",
+      "items": [
+        {
+          "product_id": "P-001",
+          "qty": 10
+        },
+        {
+          "product_id": "P-003",
+          "qty": 5
+        }
+      ],
+      "priority": 1,
+      "status": "DISPATCHED",
+      "created_at": "2026-10-27T10:15:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-002",
+      "customer_name": "Bharat Electronics Ltd",
+      "destination_city": "Bengaluru",
+      "items": [
+        {
+          "product_id": "P-005",
+          "qty": 25
+        },
+        {
+          "product_id": "P-006",
+          "qty": 2
+        }
+      ],
+      "priority": 1,
+      "status": "DISPATCHED",
+      "created_at": "2026-10-27T11:00:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-003",
+      "customer_name": "Larsen & Toubro Infra",
+      "destination_city": "Hyderabad",
+      "items": [
+        {
+          "product_id": "P-008",
+          "qty": 40
+        }
+      ],
+      "priority": 2,
+      "status": "PENDING",
+      "created_at": "2026-10-27T12:30:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-004",
+      "customer_name": "Godrej Automation Labs",
+      "destination_city": "Mumbai",
+      "items": [
+        {
+          "product_id": "P-004",
+          "qty": 15
+        },
+        {
+          "product_id": "P-010",
+          "qty": 8
+        }
+      ],
+      "priority": 1,
+      "status": "PENDING",
+      "created_at": "2026-10-27T13:45:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-005",
+      "customer_name": "Kirloskar Oil Engines",
+      "destination_city": "Ahmedabad",
+      "items": [
+        {
+          "product_id": "P-003",
+          "qty": 12
+        }
+      ],
+      "priority": 3,
+      "status": "PENDING",
+      "created_at": "2026-10-27T14:20:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-006",
+      "customer_name": "TVS Motor Plant",
+      "destination_city": "Chennai",
+      "items": [
+        {
+          "product_id": "P-001",
+          "qty": 15
+        },
+        {
+          "product_id": "P-007",
+          "qty": 10
+        }
+      ],
+      "priority": 2,
+      "status": "PENDING",
+      "created_at": "2026-10-27T15:10:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-007",
+      "customer_name": "Defence Research Est.",
+      "destination_city": "Delhi",
+      "items": [
+        {
+          "product_id": "P-006",
+          "qty": 8
+        }
+      ],
+      "priority": 1,
+      "status": "PENDING",
+      "created_at": "2026-10-27T16:05:00Z",
+      "failure_reason": null
+    },
+    {
+      "id": "O-008",
+      "customer_name": "Haldia Petrochemicals",
+      "destination_city": "Kolkata",
+      "items": [
+        {
+          "product_id": "P-006",
+          "qty": 900
+        }
+      ],
+      "priority": 3,
+      "status": "FAILED",
+      "created_at": "2026-10-27T09:00:00Z",
+      "failure_reason": "insufficient stock"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "SH-001",
+      "order_id": "O-001",
+      "from_warehouse_id": "W-003",
+      "to_city": "Pune",
+      "route": [
+        "Pune"
+      ],
+      "distance_km": 0.0,
+      "cost": 50.0,
+      "status": "IN_TRANSIT",
+      "created_at": "2026-10-27T10:16:00Z"
+    },
+    {
+      "id": "SH-002",
+      "order_id": "O-002",
+      "from_warehouse_id": "W-004",
+      "to_city": "Bengaluru",
+      "route": [
+        "Bengaluru"
+      ],
+      "distance_km": 0.0,
+      "cost": 50.0,
+      "status": "DELIVERED",
+      "created_at": "2026-10-27T11:02:00Z"
+    }
+  ]
+}
